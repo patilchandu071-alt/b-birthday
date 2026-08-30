@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Bhavani ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Background -->
+<div class="background"></div>
+
+<!-- Floating particles -->
+<div class="particles" id="particles"></div>
+
+<!-- MUSIC -->
+<audio id="music" loop>
+    <source src="music/birthday-music.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" id="musicBtn" onclick="toggleMusic()">
+    ♪
+</button>
+
+
+<!-- ================= PASSWORD PAGE ================= -->
+
+<section class="page active" id="lockPage">
+
+    <div class="lock-card">
+
+        <div class="lock-icon">🔐</div>
+
+        <p class="small-title">A LITTLE SECRET</p>
+
+        <h1>
+            Only
+            <span>For You.</span>
+        </h1>
+
+        <p class="intro">
+            This little surprise is specially made
+            for <strong>Bhavani</strong> ❤️
+        </p>
+
+        <div class="password-box">
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter the secret password"
+                autocomplete="off"
+            >
+
+            <button onclick="unlock()">
+                Unlock My Surprise
+                <span>♥</span>
+            </button>
+
+        </div>
+
+        <p class="error" id="error">
+            Wrong password ❤️ Try again.
+        </p>
+
+        <p class="hint">
+            Some surprises are worth unlocking...
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WELCOME PAGE ================= -->
+
+<section class="page" id="welcomePage">
+
+    <div class="chapter">
+        CHAPTER 01
+    </div>
+
+    <div class="giant-heart">
+        ♥
+    </div>
+
+    <h2 class="hero-title">
+        Someone very special
+        <br>
+        has a birthday today...
+    </h2>
+
+    <p class="hero-subtitle">
+        And I made a little surprise just for you.
+    </p>
+
+    <p class="for-name">
+        For <strong>Bhavani</strong> ❤️
+    </p>
+
+    <button class="main-btn" onclick="showPage('journeyPage')">
+        Begin Our Story →
+    </button>
+
+    <p class="signature">
+        With love, Chandu
+    </p>
+
+</section>
+
+
+<!-- ================= JOURNEY PAGE ================= -->
+
+<section class="page" id="journeyPage">
+
+    <div class="chapter">
+        CHAPTER 02
+    </div>
+
+    <h2 class="section-title">
+        A little journey
+        <br>
+        <span>just for you.</span>
+    </h2>
+
+    <p class="section-text">
+        Three little doors.
+        <br>
+        Each one has something from my heart.
+    </p>
+
+    <div class="door-container">
+
+        <div class="door-card" onclick="showPage('memoryPage')">
+
+            <div class="door-number">01</div>
+
+            <div class="door-icon">✦</div>
+
+            <h3>Little Moments</h3>
+
+            <p>
+                Some moments become memories.
+            </p>
+
+            <span class="door-arrow">→</span>
+
+        </div>
+
+
+        <div class="door-card" onclick="showPage('letterPage')">
+
+            <div class="door-number">02</div>
+
+            <div class="door-icon">♡</div>
+
+            <h3>A Letter</h3>
+
+            <p>
+                Something I wanted to tell you.
+            </p>
+
+            <span class="door-arrow">→</span>
+
+        </div>
+
+
+        <div class="door-card" onclick="showPage('birthdayPage')">
+
+            <div class="door-number">03</div>
+
+            <div class="door-icon">✧</div>
+
+            <h3>Your Birthday</h3>
+
+            <p>
+                The final little surprise.
+            </p>
+
+            <span class="door-arrow">→</span>
+
+        </div>
+
+    </div>
+
+    <button class="back-btn" onclick="showPage('welcomePage')">
+        ← Back
+    </button>
+
+</section>
+
+
+<!-- ================= MEMORY PAGE ================= -->
+
+<section class="page" id="memoryPage">
+
+    <div class="chapter">
+        CHAPTER 03
+    </div>
+
+    <h2 class="section-title">
+        Little moments
+        <br>
+        <span>matter.</span>
+    </h2>
+
+    <div class="memory-box">
+
+        <div class="memory-symbol">♡</div>
+
+        <p class="quote">
+            "The best memories are often
+            made from the smallest moments."
+        </p>
+
+        <div class="line"></div>
+
+        <p>
+            Maybe it is a simple conversation.
+        </p>
+
+        <p>
+            Maybe it is a random laugh.
+        </p>
+
+        <p>
+            Maybe it is just being there.
+        </p>
+
+        <p>
+            But somehow...
+            those little things stay with us.
+        </p>
+
+        <div class="heart-line">
+            ♥ &nbsp; ♥ &nbsp; ♥
+        </div>
+
+    </div>
+
+    <button class="main-btn" onclick="showPage('letterPage')">
+        Something from my heart →
+    </button>
+
+    <button class="back-btn" onclick="showPage('journeyPage')">
+        ← Back
+    </button>
+
+</section>
+
+
+<!-- ================= LETTER PAGE ================= -->
+
+<section class="page" id="letterPage">
+
+    <div class="chapter">
+        CHAPTER 04
+    </div>
+
+    <h2 class="section-title">
+        A letter
+        <br>
+        <span>for you.</span>
+    </h2>
+
+    <div class="letter-wrapper">
+
+        <div class="envelope">
+
+            <div class="envelope-flap"></div>
+
+            <div class="envelope-heart">
+                ♥
+            </div>
+
+        </div>
+
+
+        <div class="letter">
+
+            <p class="letter-top">
+                FOR BHAVANI ♡
+            </p>
+
+            <h3>
+                Dear Bhavani,
+            </h3>
+
+            <p>
+                Today is your birthday, and I wanted
+                to make something that wasn't just
+                another birthday wish.
+            </p>
+
+            <p>
+                I wanted to create a small place
+                where you could stop for a moment
+                and know that someone thought about
+                you a little extra today.
+            </p>
+
+            <p>
+                You deserve beautiful moments,
+                genuine smiles and countless reasons
+                to be happy.
+            </p>
+
+            <p>
+                So here is one tiny corner of the
+                internet made especially for you.
+            </p>
+
+            <p class="letter-final">
+                Happy Birthday, Bhavani ❤️
+            </p>
+
+            <p class="letter-sign">
+                — Chandu
+            </p>
+
+        </div>
+
+    </div>
+
+    <button class="main-btn" onclick="showPage('birthdayPage')">
+        One More Thing →
+    </button>
+
+    <button class="back-btn" onclick="showPage('journeyPage')">
+        ← Back
+    </button>
+
+</section>
+
+
+<!-- ================= BIRTHDAY PAGE ================= -->
+
+<section class="page" id="birthdayPage">
+
+    <div class="birthday-content">
+
+        <div class="chapter">
+            CHAPTER 05
+        </div>
+
+        <div class="birthday-crown">
+            ✦
+        </div>
+
+        <h2 class="birthday-title">
+            Happy Birthday
+            <br>
+            <span>Bhavani.</span>
+        </h2>
+
+        <div class="big-heart">
+            ♥
+        </div>
+
+        <p class="birthday-message">
+            May this year bring you
+            <br>
+            more happiness than you expect,
+            <br>
+            more smiles than you can count,
+            <br>
+            and memories you'll never forget.
+        </p>
+
+        <div class="wish-card">
+
+            <p>
+                Today is your day.
+            </p>
+
+            <strong>
+                Make it beautiful.
+            </strong>
+
+            <div class="stars">
+                ✦　♡　✦
+            </div>
+
+        </div>
+
+        <p class="final-line">
+            Made with love by <strong>Chandu</strong>
+            for <strong>Bhavani</strong> ❤️
+        </p>
+
+        <button class="main-btn" onclick="celebrate()">
+            Make a Wish ✨
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CELEBRATION ================= -->
+
+<div class="celebration" id="celebration">
+
+    <div class="celebration-box">
+
+        <div class="celebration-heart">
+            ♥
+        </div>
+
+        <h2>
+            Make a wish,
+            <br>
+            Bhavani ✨
+        </h2>
+
+        <p>
+            I hope it comes true.
+        </p>
+
+        <button onclick="closeCelebration()">
+            ❤️ Thank you
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
